@@ -1,8 +1,9 @@
 
 
+
 def winner(names: list[str], scores: list[float]) -> str:
     name_win = ''
-    max_scores = 0
+    max_scores = -10000000
     for i in range(0,len(scores)):
         if  scores[i] >  max_scores:
              max_scores = scores[i]
@@ -10,7 +11,7 @@ def winner(names: list[str], scores: list[float]) -> str:
     return name_win
 
 def average(scores: list[float]) -> float:
-    return( round(sum(scores)/len(scores),1))
+    return( round(sum(scores)/len(scores),2))
 
 
 

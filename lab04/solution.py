@@ -11,7 +11,10 @@ def winner(names: list[str], scores: list[float]) -> str:
     return name_win
 
 def average(scores: list[float]) -> float:
-    return( round(sum(scores)/len(scores),2))
+    if len(scores)  > 0:
+        return( round(sum(scores)/len(scores),2))
+    else:
+        return 0.0
 
 
 
@@ -49,6 +52,8 @@ def above_average(names: list[str], scores: list[float]) -> list[str]:
 
 ##names =  ["Аня", "Боря", "Вика"]
 ##scores = [7.0,   9.0,    9.0]
+##
+##print(average(scores))
 ##print( winner(names, scores), average(scores) )
 ##
 ##print(ranking(names, scores) )

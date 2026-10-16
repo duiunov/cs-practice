@@ -1,23 +1,37 @@
 from tablestats import read_rows
 
 
-##  'events-small.csv'
 
-path = 'events-small.csv' # input()
 
-f = []
+path = input() # 'events.csv' 
+
+lines = []
 
 with open(path , encoding="utf-8") as table:
     rows = table
     
     for i in rows:
-        f += [i[:-1].split(',')]
+        lines += [i[:-1].split(',')]
 
-
-##for i in f:
-##    print(i)
     
-print(read_rows(f))
+        
+rows = read_rows(lines)
+print(len(rows))
+
+err = 0
+tip = []
+for i in range(1,len(lines)):
+    if len(lines[i]) > 1:
+        tip += [lines[i][1]]
+        
+        if lines[i][1] == 'ошибка':
+            err += float(lines[i][2])
+
+print(len(set(tip)))
+print(err)
+
+
+
 
 
 

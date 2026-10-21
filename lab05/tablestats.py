@@ -35,7 +35,7 @@ def total_minutes(rows, kind):
 
 
 def to_csv(counts):
-    csv_text = 'тип,количество \n'
+    csv_text = 'тип,количество\n'
     for row in sorted(counts):
         csv_text += f'{row},{counts[row]}\n'
     return csv_text

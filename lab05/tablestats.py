@@ -25,10 +25,9 @@ def count_types(rows):
 
 def total_minutes(rows, kind):
     kind_time = 0
-    if kind != 'ошибка':
-        for row in rows:
-            if row['тип'] == kind:
-                kind_time += float(row['минуты'])
+    for row in rows:
+        if row['тип'] == kind and row['минуты'] != 'ошибка':
+            kind_time += float(row['минуты'])
 
     return kind_time
 

@@ -1,4 +1,4 @@
-from tablestats import read_rows, count_types
+from tablestats import read_rows, count_types, total_minutes
 
 
 
@@ -14,9 +14,10 @@ with open(path , encoding="utf-8") as table:
         lines += [i[:-1]]
 
     
-print(lines)
+# print(lines)
 rows = read_rows(lines)
 type_counts = count_types(rows)
+total = total_minutes(rows,'запуск')
 # print(rows)
 # print(type_counts)
 print(len(rows))

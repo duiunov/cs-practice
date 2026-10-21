@@ -7,7 +7,7 @@ def read_rows(lines):
         lines[i] = lines[i].split(',')
 
     for i in range(1,len(lines)):
-        if len(lines[i]) == len(lines[0]) and ('ошибка' not in lines[i]):
+        if len(lines[i]) == len(lines[0]):
             rows += [dict(zip(lines[0],lines[i]))]
     return rows
 
@@ -25,9 +25,10 @@ def count_types(rows):
 
 def total_minutes(rows, kind):
     kind_time = 0
-    for row in rows:
-        if row['тип'] == kind:
-            kind_time += float(row['минуты'])
+    if kind != 'ошибка':
+        for row in rows:
+            if row['тип'] == kind:
+                kind_time += float(row['минуты'])
 
     return kind_time
 

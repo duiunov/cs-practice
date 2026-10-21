@@ -17,7 +17,7 @@ with open(path , encoding="utf-8") as table:
 print(lines)
 rows = read_rows(lines)
 type_counts = count_types(rows)
-print(rows)
+# print(rows)
 # print(type_counts)
 print(len(rows))
 

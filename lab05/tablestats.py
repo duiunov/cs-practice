@@ -23,6 +23,14 @@ def count_types(rows):
             type_counts[type1] = 1
     return type_counts
 
+def total_minutes(rows, kind):
+    kind_time = 0
+    for row in rows:
+        if row['тип'] == kind:
+            kind_time += float(row['минуты'])
+
+    return kind_time
+
 
 
 

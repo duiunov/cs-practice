@@ -7,7 +7,7 @@ def read_rows(lines):
         lines[i] = lines[i].split(',')
 
     for i in range(1,len(lines)):
-        if len(lines[i]) > 1:
+        if len(lines[i]) == len(lines[0]):
             rows += [dict(zip(lines[0],lines[i]))]
     return rows
 

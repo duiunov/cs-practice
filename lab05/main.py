@@ -1,9 +1,9 @@
-from tablestats import read_rows, count_types, total_minutes
+from tablestats import read_rows, count_types, total_minutes, to_csv
 
 
 
 
-path = input() # 'events.csv' 
+path = input() # 'events.csv'
 
 lines = []
 
@@ -20,6 +20,8 @@ type_counts = count_types(rows)
 total = total_minutes(rows,'запуск')
 # print(rows)
 # print(type_counts)
+# print(to_csv(type_counts))
+
 print(len(rows))
 
 err = 0

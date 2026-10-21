@@ -23,6 +23,8 @@ def count_types(rows):
             type_counts[type1] = 1
     return type_counts
 
+
+
 def total_minutes(rows, kind):
     kind_time = 0
     for row in rows:
@@ -32,6 +34,11 @@ def total_minutes(rows, kind):
     return kind_time
 
 
+def to_csv(counts):
+    csv_text = 'тип,количество \n'
+    for row in sorted(counts):
+        csv_text += f'{row},{counts[row]}\n'
+    return csv_text
 
 
     

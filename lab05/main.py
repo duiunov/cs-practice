@@ -11,13 +11,13 @@ with open(path , encoding="utf-8") as table:
     rows = table
     
     for i in rows:
-        lines += [i[:-1].split(',')]
+        lines += [i[:-1]]
 
     
-        
+print(lines)
 rows = read_rows(lines)
 type_counts = count_types(rows)
-# print(rows)
+print(rows)
 # print(type_counts)
 print(len(rows))
 

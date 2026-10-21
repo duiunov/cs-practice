@@ -3,10 +3,15 @@
 
 def read_rows(lines):
     rows = []
+    for i in range(len(lines)):
+        lines[i] = lines[i].split(',')
+
     for i in range(1,len(lines)):
         if len(lines[i]) > 1:
             rows += [dict(zip(lines[0],lines[i]))]
     return rows
+
+
 
 def count_types(rows):
     type_counts = {}

@@ -1,4 +1,4 @@
-from tablestats import read_rows
+from tablestats import read_rows, count_types
 
 
 
@@ -16,6 +16,9 @@ with open(path , encoding="utf-8") as table:
     
         
 rows = read_rows(lines)
+type_counts = count_types(rows)
+# print(rows)
+# print(type_counts)
 print(len(rows))
 
 err = 0

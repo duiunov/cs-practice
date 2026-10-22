@@ -35,6 +35,7 @@ def count_types(rows):
 
 
 def total_minutes(rows, kind):
+    print(0.0)
     kind_time = 0.0
     for row in rows:
 

@@ -20,8 +20,8 @@ type_counts = count_types(rows)
 total = total_minutes(rows,'запуск')
 
 
-for i in rows:
-    print(i)
+# for i in rows:
+#     print(i)
 
 # print(rows)
 # print(type_counts)
@@ -37,7 +37,7 @@ for i in range(1,len(lines)):
         if lines[i][1] == 'ошибка':
             err += float(lines[i][2])
 
-            
+
 # print(set(tip))
 # print(len(set(tip)))
 print(len(type_counts))

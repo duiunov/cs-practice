@@ -4,10 +4,19 @@
 def read_rows(lines):
     rows = []
     for i in range(len(lines)):
-        lines[i] = lines[i].strip().split(',')
+        line = []
+        lines[i] = lines[i].split(',')
+
+        for j in range(len(lines[i])):
+            line += [lines[i][j].strip()]
+
+        lines[i] += line
+
+
 
     for i in range(1,len(lines)):
         if len(lines[i]) == len(lines[0]):
+
             rows += [dict(zip(lines[0],lines[i]))]
     return rows
 
@@ -28,10 +37,17 @@ def count_types(rows):
 def total_minutes(rows, kind):
     kind_time = 0.0
     for row in rows:
-        if row['тип'] == kind and row['минуты'] != 'ошибка':
-            kind_time += float(row['минуты'])
 
-    return kind_time
+        def to_float(s):
+            try:
+                return float(s)
+            except valueerror:
+                return 0.0
+
+        if row['тип'] == kind and row['минуты']:
+            kind_time += to_float((row['минуты']).strip().replace(",", "."))
+
+    return round(kind_time,1)
 
 
 def to_csv(counts):

@@ -18,6 +18,7 @@ with open(path , encoding="utf-8") as table:
 rows = read_rows(lines)
 type_counts = count_types(rows)
 total = total_minutes(rows,'запуск')
+
 # print(rows)
 # print(type_counts)
 # print(to_csv(type_counts))

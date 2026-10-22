@@ -4,7 +4,7 @@
 def read_rows(lines):
     rows = []
     for i in range(len(lines)):
-        lines[i] = lines[i].split(',')
+        lines[i] = lines[i].strip().split(',')
 
     for i in range(1,len(lines)):
         if len(lines[i]) == len(lines[0]):
@@ -26,7 +26,7 @@ def count_types(rows):
 
 
 def total_minutes(rows, kind):
-    kind_time = 0
+    kind_time = 0.0
     for row in rows:
         if row['тип'] == kind and row['минуты'] != 'ошибка':
             kind_time += float(row['минуты'])

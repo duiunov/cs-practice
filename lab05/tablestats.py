@@ -39,7 +39,7 @@ def total_minutes(rows, kind):
     total = 0.0
 
     for row in rows:
-        if row.get("тип") != kind:
+        if row["тип"] != kind:
             continue
 
         value = row["минуты"].strip().replace(",", ".")

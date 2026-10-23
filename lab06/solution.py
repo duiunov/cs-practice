@@ -5,16 +5,18 @@ values = ["ошибка", "запуск", "ошибка", "проверка"]
 def count_items(values):
     item_counts = {}
     for item in values:
-        if item in item_counts:
-            item_counts[item] += 1
-        else:
-            item_counts[item] = 1
+        counts[value] = counts.get(value, 0) + 1
     return item_counts
 
 
 def unique_sorted(values):
-    return set(sorted(values))
+    return sorted(set(values))
 
+def common(first, second):
+    return sorted(set(first) & set(second))
+
+def only_in_first(first, second):
+    return sorted(set(first) - set(second))
 
 # print(count_items(values))
 # print(unique_sorted(values))

@@ -23,6 +23,7 @@ total = total_minutes(rows,'запуск')
 
 err = 0
 tip = []
+
 for i in range(1,len(lines)):
     if len(lines[i]) > 1:
         if lines[i][1] == 'ошибка':

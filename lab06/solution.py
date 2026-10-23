@@ -13,7 +13,7 @@ def count_items(values):
 
 
 def unique_sorted(values):
-    return set(sorted(count_items(values)))
+    return set(sorted(values))
 
 
 # print(count_items(values))

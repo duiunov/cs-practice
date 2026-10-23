@@ -5,7 +5,7 @@ values = ["ошибка", "запуск", "ошибка", "проверка"]
 def count_items(values):
     item_counts = {}
     for item in values:
-        counts[value] = counts.get(value, 0) + 1
+        item_counts[item] = item_counts.get(item, 0) + 1
     return item_counts
 
 
@@ -18,5 +18,5 @@ def common(first, second):
 def only_in_first(first, second):
     return sorted(set(first) - set(second))
 
-# print(count_items(values))
+print(count_items(values))
 # print(unique_sorted(values))

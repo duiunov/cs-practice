@@ -1,6 +1,6 @@
 
 
-# values = ["ошибка", "запуск", "ошибка", "проверка"]
+values = ["ошибка", "запуск", "ошибка", "проверка"]
 
 def count_items(values):
     item_counts = {}
@@ -12,4 +12,9 @@ def count_items(values):
     return item_counts
 
 
+def unique_sorted(values):
+    return set(sorted(count_items(values)))
+
+
 # print(count_items(values))
+# print(unique_sorted(values))

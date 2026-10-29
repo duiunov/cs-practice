@@ -18,5 +18,7 @@ def common(first, second):
 def only_in_first(first, second):
     return sorted(set(first) - set(second))
 
-print(count_items(values))
+
+
+# print(count_items(values))
 # print(unique_sorted(values))

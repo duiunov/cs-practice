@@ -29,6 +29,7 @@ for i in range(1,len(lines)):
         if lines[i][1] == 'ошибка':
             err += float(lines[i][2])
 
+
 print(len(rows))
 print(len(type_counts))
 print(err)

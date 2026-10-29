@@ -18,6 +18,10 @@ def column_means(matrix):
     return np.round(np.mean(arr, axis=0), 6).tolist()
 
 
+def column_range(matrix, column):
+    arr = np.asarray(matrix, dtype=float)
+    col_data = arr[:, column]
+    return float(np.round(np.max(col_data) - np.min(col_data), 6))
 
 
 
